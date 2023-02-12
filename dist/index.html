@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Kanit', sans-serif;
+            background-color: #000;
+        }
+        .flex_col_center{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex_col_start{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .c_white{
+            color: #fff;
+        }
+        #game_cont{
+            padding: 20px;
+        }
+        #game_cont h1{
+            font-size: 40px;
+            color: #EA00FF;
+            opacity: 1;
+            text-shadow: 
+            3px 3px 0 #fff, 
+            -3px -3px 0 #fff, 
+            3px -3px 0 #fff, 
+            -3px 3px 0 #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .content_cont .content_inner_cont>span{
+            color:#fff;
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+
+        .content_cont .input_cont{
+            height: 40px;
+            display: flex;
+            justify-content: center;
+     
+            width: auto;
+            position: relative;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .content_cont .input_cont>input{
+            outline: none;
+            box-shadow: none;
+        }
+        .content_cont .input_cont>input{
+            width: 100%;
+            background-color: #fff;
+            padding:0 10px;
+            border: none;
+            flex: 1;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .content_cont .input_cont>button{
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #FFC312;
+            color: #fff;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            padding: 0 30px;
+            transition: 0.2s all ease-in-out;
+        }
+        .content_cont .input_cont>button:hover{
+            background-color: #eeb710;
+        }
+        .content_inner_cont{
+            margin-bottom:18px;
+        }
+        .prev_ent_cont>span:first-child{
+            margin-bottom: 5px;
+        }
+        .prev_ent_cont span{
+            font-size: 20px;
+        }
+        .prev_ent>span{
+            margin-right: 8px;
+        }
+        .prev_ent>span:nth-child(odd){
+            color: #EE5A24;
+        }
+        .prev_ent>span:nth-child(even){
+            color: #F79F1F;
+        }
+    </style>
+
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <div id="game_cont" class="flex_col_center">
+        <h1>Number Guessing Mania &#128293;</h1>
+        <div class="content_cont">
+            <div class="content_inner_cont flex_col_center">
+                <span>Enter a number between 1 - 100</span>
+                <div class="input_cont">
+                    <input type="text" id="num_inp" placeholder="enter the number &#128521;">
+                    <button>Submit</button>
+                </div>
+            </div>
+            <div class="prev_ent_cont flex_col_start c_white">
+                <span class="prev_ent_txt">Previous Entries:</span>
+                <div class="prev_ent">
+                    <span class="">asd</span>
+                    <span class="">asd</span>
+                    <span class="">asd</span>
+                    <span class="">asd</span>
+                </div>
+            </div>
+            <div id="msg"></div>
+        </div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
