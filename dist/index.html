@@ -47,7 +47,6 @@
         }
 
         .content_cont .input_cont{
-            height: 40px;
             display: flex;
             justify-content: center;
      
@@ -63,9 +62,7 @@
             box-shadow: none;
         }
         .content_cont .input_cont>input{
-            width: 100%;
             background-color: #fff;
-            padding:0 10px;
             border: none;
             flex: 1;
             border-top-left-radius: 10px;
@@ -108,6 +105,31 @@
         .prev_ent>span:nth-child(even){
             color: #F79F1F;
         }
+        .prev_ent{
+            margin-left: 5px;
+        }
+        @media (min-width:481px) {
+            .content_cont .input_cont{
+                min-height: 40px;
+            }
+            .content_cont .input_cont>input{
+                padding: 0 10px;
+            }
+        }
+        @media (max-width:480px) {
+            .content_cont .input_cont{
+                flex-direction: column;
+                
+            }
+            .content_cont .input_cont>input{
+                min-height: 40px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            .content_cont .input_cont>button{
+                min-height: 40px;
+            }
+        }
     </style>
 
     <title>Number Guessing Game</title>
@@ -126,10 +148,10 @@
             <div class="prev_ent_cont flex_col_start c_white">
                 <span class="prev_ent_txt">Previous Entries:</span>
                 <div class="prev_ent">
-                    <span class="">asd</span>
-                    <span class="">asd</span>
-                    <span class="">asd</span>
-                    <span class="">asd</span>
+                    <span>asd</span>
+                    <span>asd</span>
+                    <span>asd</span>
+                    <span>asd</span>
                 </div>
             </div>
             <div id="msg"></div>
