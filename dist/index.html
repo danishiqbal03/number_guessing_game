@@ -26,7 +26,8 @@
             color: #fff;
         }
         #game_cont{
-            padding: 20px;
+            max-width: 535px;
+            margin: auto;
         }
         #game_cont h1{
             font-size: 40px;
@@ -88,7 +89,7 @@
             background-color: #eeb710;
         }
         .content_inner_cont{
-            margin-bottom:18px;
+            margin-bottom:30px;
         }
         .prev_ent_cont>span:first-child{
             margin-bottom: 5px;
@@ -107,6 +108,61 @@
         }
         .prev_ent{
             margin-left: 5px;
+            margin-right: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+
+        .reload_btn{
+            background-color: #FFC312;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;    
+        }
+
+        .reload_img{
+            width: 20px;
+            height: 20px;
+            /* margin-left: 10px; */
+            transform: rotate(280deg);
+            transition: 0.3s all ease-in-out;
+        }
+
+        .reload_btn:hover{
+            background-color: #eeb710;
+        }
+        .reload_btn:hover .reload_img{
+            transform: rotate(360deg);
+        }
+
+        .prev_ent_cont{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .msg{
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+        }
+        .msg.error.show{
+            display: flex;
+            background-color: #e84118;
+        }
+        .msg.success.show{
+            display: flex;
+            background-color: #4cd137;
+        }
+        .content_cont{
+            width: 100%;
         }
         @media (min-width:481px) {
             .content_cont .input_cont{
@@ -142,19 +198,21 @@
                 <span>Enter a number between 1 - 100</span>
                 <div class="input_cont">
                     <input type="text" id="num_inp" placeholder="enter the number &#128521;">
-                    <button>Submit</button>
+                    <button id="submit_btn">Submit</button>
                 </div>
             </div>
-            <div class="prev_ent_cont flex_col_start c_white">
-                <span class="prev_ent_txt">Previous Entries:</span>
-                <div class="prev_ent">
-                    <span>asd</span>
-                    <span>asd</span>
-                    <span>asd</span>
-                    <span>asd</span>
+            <div class="prev_ent_cont c_white">
+                <div class="prev_inner_ent">
+                    <span class="prev_ent_txt">Previous Entries:</span>
+                    <div class="prev_ent">
+                    </div>
                 </div>
+                <button class="reload_btn" title="reload"><img src="../assets/image/reload.svg" alt="reload" class="reload_img"></button>
             </div>
-            <div id="msg"></div>
+            <div class="msg success c_white">🔥 Boom! You nailed it! Congratulations 🎉 on your successful guess!</div>
+            <div class="msg error close c_white">Close, but not quite. Keep trying! 😉</div>
+            <div class="msg error far c_white">Not quite, but don't give up! Keep practicing. 😉</div>
+
         </div>
     </div>
 <script src="index.js"></script>
